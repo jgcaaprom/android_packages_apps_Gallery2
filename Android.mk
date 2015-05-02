@@ -44,3 +44,10 @@ ifeq ($(strip $(LOCAL_PACKAGE_OVERRIDES)),)
 include $(call all-makefiles-under, $(LOCAL_PATH))
 
 endif
+
+$(combo_2nd_arch_prefix)TARGET_NDK_GCC_VERSION := 4.8
+
+LOCAL_CC := $$(TARGET_TOOLCHAIN_ROOT)/../arm-linux-androideabi-4.8/bin/arm-linux-androideabi-gcc$$(HOST_EXECUTABLE_SUFFIX)
+LOCAL_CXX := $$(TARGET_TOOLCHAIN_ROOT)/../arm-linux-androideabi-4.8/bin/arm-linux-androideabi-g++$$(HOST_EXECUTABLE_SUFFIX)
+
+
